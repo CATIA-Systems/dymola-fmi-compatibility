@@ -1,3 +1,5 @@
+![3DS](resources/3DS.svg)
+
 # Dymola FMI Compatibility Information
 
 This repository provides example FMUs exported from [Dymola](https://www.3ds.com/products/catia/dymola).
