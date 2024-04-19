@@ -6,7 +6,7 @@ This repository provides example FMUs exported from [Dymola](https://www.3ds.com
 
 ## Example FMUs
 
-Format: `<Dyamola_version>/<model_name>_<fmi_version>_<solver>.fmu`
+Format: `<Dymola_version>/<model_name>_<fmi_version>_<solver>.fmu`
 
 Binaries: x86_64 binaries for Linux and Windows
 
