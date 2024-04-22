@@ -1,4 +1,4 @@
-![3DS](resources/3DS.svg)
+<img src="resources/3DS.svg" width="400"/>
 
 # Dymola FMI Compatibility Information
 

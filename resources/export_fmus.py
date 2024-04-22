@@ -19,7 +19,7 @@ algorithms = [
 
 fmi_versions = ['1', '2', '3']
 
-dymola_version = '2024x Refresh 1 Alpha'
+dymola_version = '2024x Refresh 1'
 
 root = Path(__file__).parent.parent
 
@@ -42,9 +42,8 @@ with Dymola(showWindow=True) as dymola:
 
     dymola.cd(temp_dir)
 
-    dymola.setVariable('Advanced.FMI3.MinimumArraySize', 1)
     dymola.setVariable('Advanced.FMI.CrossExport', True)
-    dymola.setVariable('Advanced.Beta.FMI3.HybridCoSim', True)
+    dymola.setVariable('Advanced.FMI3.EventModeCoSim', True)
 
     dymola.openModel(mo_path, changeDirectory=False)
 
@@ -70,7 +69,7 @@ with Dymola(showWindow=True) as dymola:
         platforms = supported_platforms(fmu_path)
 
         assert model_description.fmiVersion.startswith(fmi_version)
-        assert model_description.generationTool.startswith("Dymola Version 2024x Refresh 1 Alpha, 2024-02-09")
+        assert model_description.generationTool.startswith(f"Dymola Version {dymola_version}")
 
         if fmi_version == '3':
             assert model_description.coSimulation.hasEventMode
