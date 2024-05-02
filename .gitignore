@@ -2,4 +2,4 @@ resources/Reference-FMUs-*/
 temp/
 .idea/
 dsfinal.txt
-
+result.csv

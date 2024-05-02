@@ -46,35 +46,32 @@ model CoupledClutches "Drive train with 3 dynamically coupled clutches"
         origin={-35,-25},
         extent={{-5,-5},{15,15}},
         rotation=270)));
-  Modelica.Blocks.Sources.Step step2(startTime=T3) annotation (Placement(
-        transformation(
-        origin={85,-25},
-        extent={{-5,-5},{15,15}},
-        rotation=270)));
   Modelica.Mechanics.Rotational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-100,-90},{-80,-70}})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedSensor1
-    annotation (Placement(transformation(extent={{-40,50},{-20,70}})));
-  Modelica.Blocks.Interfaces.RealOutput w1
+    annotation (Placement(transformation(extent={{110,50},{130,70}})));
+  Modelica.Blocks.Interfaces.RealOutput J1_w
     "Absolute angular velocity of flange as output signal"
     annotation (Placement(transformation(extent={{140,50},{160,70}})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedSensor2
-    annotation (Placement(transformation(extent={{16,30},{36,50}})));
-  Modelica.Blocks.Interfaces.RealOutput w2
+    annotation (Placement(transformation(extent={{110,10},{130,30}})));
+  Modelica.Blocks.Interfaces.RealOutput J2_w
     "Absolute angular velocity of flange as output signal"
     annotation (Placement(transformation(extent={{140,10},{160,30}})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedSensor3
-    annotation (Placement(transformation(extent={{60,-10},{80,10}})));
-  Modelica.Blocks.Interfaces.RealOutput w3
+    annotation (Placement(transformation(extent={{110,-30},{130,-10}})));
+  Modelica.Blocks.Interfaces.RealOutput J3_w
     "Absolute angular velocity of flange as output signal"
     annotation (Placement(transformation(extent={{140,-30},{160,-10}})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedSensor4
-    annotation (Placement(transformation(extent={{110,-44},{130,-24}})));
-  Modelica.Blocks.Interfaces.RealOutput w4
+    annotation (Placement(transformation(extent={{110,-50},{130,-30}})));
+  Modelica.Blocks.Interfaces.RealOutput J4_w
     "Absolute angular velocity of flange as output signal"
     annotation (Placement(transformation(extent={{140,-70},{160,-50}})));
-  Modelica.Blocks.Interfaces.RealInput tau
-    "Accelerating torque acting at flange (= -flange.tau)"
+  Modelica.Blocks.Sources.Sine sin1(amplitude=10, f=5) annotation (
+      Placement(transformation(extent={{-130,-70},{-110,-50}})));
+  Modelica.Blocks.Interfaces.RealInput step2
+    "Normalized force signal 0..1 (normal force = fn_max*f_normalized; clutch is engaged if > 0)"
     annotation (Placement(transformation(extent={{-180,-20},{-140,20}})));
 equation
   connect(torque.flange, J1.flange_a)
@@ -95,28 +92,29 @@ equation
           -49}},             color={0,0,127}));
   connect(step1.y, clutch2.f_normalized) annotation (Line(points={{30,-41},{30,
           -49}},                   color={0,0,127}));
-  connect(step2.y, clutch3.f_normalized)
-    annotation (Line(points={{90,-41},{90,-49}},       color={0,0,127}));
   connect(fixed.flange, torque.support) annotation (Line(points={{-90,-80},{-90,
           -70}}));
-  connect(speedSensor1.flange, clutch1.flange_a) annotation (Line(points={{-40,
-          60},{-50,60},{-50,-60},{-40,-60}}, color={0,0,0}));
-  connect(speedSensor1.w, w1)
-    annotation (Line(points={{-19,60},{150,60}}, color={0,0,127}));
-  connect(speedSensor2.flange, clutch2.flange_a) annotation (Line(points={{16,
-          40},{10,40},{10,-60},{20,-60}}, color={0,0,0}));
-  connect(speedSensor2.w, w2) annotation (Line(points={{37,40},{134,40},{134,20},
-          {150,20}}, color={0,0,127}));
+  connect(speedSensor1.flange, clutch1.flange_a) annotation (Line(points={{110,60},
+          {-50,60},{-50,-60},{-40,-60}},     color={0,0,0}));
+  connect(speedSensor1.w, J1_w)
+    annotation (Line(points={{131,60},{150,60}}, color={0,0,127}));
+  connect(speedSensor2.flange, clutch2.flange_a) annotation (Line(points={{110,20},
+          {14,20},{14,-60},{20,-60}},     color={0,0,0}));
+  connect(speedSensor2.w, J2_w)
+    annotation (Line(points={{131,20},{150,20}}, color={0,0,127}));
   connect(speedSensor3.flange, J3.flange_a)
-    annotation (Line(points={{60,0},{50,0},{50,-60}}, color={0,0,0}));
-  connect(speedSensor3.w, w3) annotation (Line(points={{81,0},{134,0},{134,-20},
-          {150,-20}}, color={0,0,127}));
-  connect(speedSensor4.flange, J4.flange_a) annotation (Line(points={{110,-34},
-          {106,-34},{106,-60},{110,-60}}, color={0,0,0}));
-  connect(speedSensor4.w, w4) annotation (Line(points={{131,-34},{136,-34},{136,
-          -60},{150,-60}}, color={0,0,127}));
-  connect(torque.tau, tau) annotation (Line(points={{-102,-60},{-120,-60},{-120,
-          0},{-160,0}}, color={0,0,127}));
+    annotation (Line(points={{110,-20},{46,-20},{46,-60},{50,-60}},
+                                                      color={0,0,0}));
+  connect(speedSensor3.w, J3_w)
+    annotation (Line(points={{131,-20},{150,-20}}, color={0,0,127}));
+  connect(speedSensor4.flange, J4.flange_a) annotation (Line(points={{110,-40},
+          {106,-40},{106,-60},{110,-60}}, color={0,0,0}));
+  connect(speedSensor4.w, J4_w) annotation (Line(points={{131,-40},{134,-40},{
+          134,-60},{150,-60}}, color={0,0,127}));
+  connect(sin1.y, torque.tau)
+    annotation (Line(points={{-109,-60},{-102,-60}}, color={0,0,127}));
+  connect(clutch3.f_normalized, step2)
+    annotation (Line(points={{90,-49},{90,0},{-160,0}}, color={0,0,127}));
   annotation (
     Documentation(info="<html>
 <p>This example demonstrates how variable structure
