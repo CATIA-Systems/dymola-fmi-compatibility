@@ -14,13 +14,13 @@ from pymola import Dymola
 algorithms = [
     ('Dassl', 'csSolver', False, 0),
     ('Cvode', 'all', True, 0),
+    ('Ida', 'all', True, 0),
     ('Inline', 'cs', True, 1),
 ]
 
 fmi_versions = ['1', '2', '3']
 
-dymola_version = '2024x Refresh 1'
-
+dymola_version = '2024x Refresh 1, 2024-05-07'
 root = Path(__file__).parent.parent
 
 output_dir = Path(root / dymola_version)
