@@ -19,6 +19,7 @@ Binaries: x86_64 binaries for Linux and Windows
 | Solver                |         CS         |         ME         |       Source       |
 |-----------------------|:------------------:|:------------------:|:------------------:|
 | Dassl                 | :heavy_check_mark: |                    |                    |
+| Ida                   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Cvode                 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Inline Explicit Euler | :heavy_check_mark: |                    | :heavy_check_mark: |
 
