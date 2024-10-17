@@ -18,9 +18,13 @@ algorithms = [
     ('Inline', 'cs', True, 1),
 ]
 
-fmi_versions = ['1', '2', '3']
+fmi_versions = [
+    '1',
+    '2',
+    '3'
+]
 
-dymola_version = '2024x Refresh 1, 2024-05-07'
+dymola_version = '2025x, 2024-10-11'
 root = Path(__file__).parent.parent
 
 output_dir = Path(root / dymola_version)
@@ -29,7 +33,7 @@ resources_dir = Path(root / 'resources')
 
 mo_path = resources_dir / 'CoupledClutches.mo'
 input_file = resources_dir / 'CoupledClutches_in.csv'
-fmusim = resources_dir / 'Reference-FMUs-0.0.30' / 'fmusim-x86_64-windows' / 'fmusim.exe'
+fmusim = resources_dir / 'Reference-FMUs-0.0.36' / 'fmusim-x86_64-windows' / 'fmusim.exe'
 
 for path in [temp_dir, output_dir]:
 
