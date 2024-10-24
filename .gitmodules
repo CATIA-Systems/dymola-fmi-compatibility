@@ -1,0 +1,12 @@
+[submodule "resources/Activate"]
+	path = resources/Activate
+	url = https://github.com/altairengineering/fmus.git
+[submodule "resources/FMIToolbox"]
+	path = resources/FMIToolbox
+	url = https://github.com/modelon-community/FMIToolbox-Compliance.git
+[submodule "resources/MapleSim"]
+	path = resources/MapleSim
+	url = https://github.com/Maplesoft-fmigroup/MapleSim_FMI.git
+[submodule "resources/Sysplorer"]
+	path = resources/Sysplorer
+	url = https://github.com/TongYuan-MC/fmus.git

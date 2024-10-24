@@ -1,4 +1,6 @@
+__pycache__
 resources/Reference-FMUs-*/
+work/
 temp/
 .idea/
 dsfinal.txt
