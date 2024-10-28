@@ -18,16 +18,16 @@ Binaries: x86_64 binaries for Linux and Windows
 
 | Solver                |         CS         |         ME         |       Source       |
 |-----------------------|:------------------:|:------------------:|:------------------:|
-| Dassl                 | :heavy_check_mark: |                    |                    |
-| Ida                   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Cvode                 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Inline Explicit Euler | :heavy_check_mark: |                    | :heavy_check_mark: |
+| Dassl                 | :white_check_mark: |                    |                    |
+| Ida                   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Cvode                 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Inline Explicit Euler | :white_check_mark: |                    | :white_check_mark: |
 
 ## FMU Import
 
 With Dymola 2025x.
 
-### Altair Activate 2020
+### [Altair Activate 2020](https://github.com/altairengineering/fmus)
 
 #### FMI 2.0
 
@@ -48,7 +48,7 @@ With Dymola 2025x.
 | sinewave_array               | :white_check_mark: | :white_check_mark: |
 | triggered_and_periodic_clock |        :x:         | :white_check_mark: |
 
-### FMI Toolbox 2.15
+### [FMI Toolbox 2.15](https://github.com/modelon-community/FMIToolbox-Compliance)
 
 #### FMI 2.0
 
@@ -70,7 +70,7 @@ With Dymola 2025x.
 | IntegrateSignal   | :white_check_mark: |
 | Signal_Attributes | :white_check_mark: |
 
-### MapleSim 2024
+### [MapleSim 2024](https://github.com/Maplesoft-fmigroup/MapleSim_FMI)
 
 #### FMI 2.0
 
@@ -88,7 +88,7 @@ With Dymola 2025x.
 | CoupledClutches       |        :x:         |        :x:         |
 | SlidingCrank          | :white_check_mark: | :white_check_mark: |
 
-### Reference FMUs 0.0.36
+### [Reference FMUs 0.0.36](https://github.com/modelica/Reference-FMUs/releases/tag/v0.0.36)
 
 #### FMI 1.0
 
@@ -121,7 +121,7 @@ With Dymola 2025x.
 | StateSpace   | :white_check_mark: | :white_check_mark: |
 | VanDerPol    | :white_check_mark: | :white_check_mark: |
 
-### MWorks Sysplorer 2024a
+### [MWorks Sysplorer 2024a](https://github.com/TongYuan-MC/fmus)
 
 #### FMI 2.0
 
