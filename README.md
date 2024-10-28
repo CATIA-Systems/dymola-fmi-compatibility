@@ -3,6 +3,7 @@
 # Dymola FMI Compatibility Information
 
 This repository provides example FMUs exported from [Dymola](https://www.3ds.com/products/catia/dymola).
+The exported FMUs where simulated with [FMPy](https://github.com/CATIA-Systems/FMPy) and [fmusim](https://github.com/modelica/reference-fmus). 
 
 ## Example FMUs
 
