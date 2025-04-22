@@ -26,7 +26,7 @@ Binaries: x86_64 binaries for Linux and Windows
 
 ## FMU Import
 
-With Dymola 2025x.
+With Dymola 2025x Refresh 1.
 
 ### [Altair Activate 2020](https://github.com/altairengineering/fmus)
 
@@ -63,13 +63,13 @@ With Dymola 2025x.
 
 #### FMI 3.0
 
-| Model             |         CS         |
-|-------------------|:------------------:|
-| Continuous        | :white_check_mark: |
-| Discontinuities   | :white_check_mark: |
-| EmbeddedCode      | :white_check_mark: |
-| IntegrateSignal   | :white_check_mark: |
-| Signal_Attributes | :white_check_mark: |
+| Model             | CS  |
+|-------------------|:---:|
+| Continuous        | :x: |
+| Discontinuities   | :x: |
+| EmbeddedCode      | :x: |
+| IntegrateSignal   | :x: |
+| Signal_Attributes | :x: |
 
 ### [MapleSim 2024](https://github.com/Maplesoft-fmigroup/MapleSim_FMI)
 
@@ -78,16 +78,16 @@ With Dymola 2025x.
 | Model                 |         CS         |         ME         |
 |-----------------------|:------------------:|:------------------:|
 | ControlledTemperature | :white_check_mark: | :white_check_mark: |
-| CoupledClutches       | :white_check_mark: | :white_check_mark: |
+| CoupledClutches       |        :x:         | :white_check_mark: |
 | Rectifier             | :white_check_mark: | :white_check_mark: |
 
 #### FMI 3.0
 
 | Model                 |         CS         |         ME         |
 |-----------------------|:------------------:|:------------------:|
-| ControlledTemperature |        :x:         |        :x:         |
+| ControlledTemperature | :white_check_mark: | :white_check_mark: |
 | CoupledClutches       |        :x:         |        :x:         |
-| SlidingCrank          | :white_check_mark: | :white_check_mark: |
+| SlidingCrank          |        :x:         |        :x:         |
 
 ### [Reference FMUs 0.0.36](https://github.com/modelica/Reference-FMUs/releases/tag/v0.0.36)
 
@@ -143,6 +143,6 @@ With Dymola 2025x.
 
 ## License
 
-Copyright 2024 Dassault Systemes.
+Copyright 2025 Dassault Systemes.
 All rights reserved.
 The models and accompanying materials may only be used for testing and validation of FMI implementations.

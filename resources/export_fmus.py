@@ -24,7 +24,7 @@ fmi_versions = [
     '3'
 ]
 
-dymola_version = '2025x, 2024-10-11'
+dymola_version = '2025x Refresh 1, 2025-04-11'
 root = Path(__file__).parent.parent
 
 output_dir = Path(root / dymola_version)

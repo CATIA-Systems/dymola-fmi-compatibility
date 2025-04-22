@@ -5,3 +5,5 @@ temp/
 .idea/
 dsfinal.txt
 result.csv
+/pyproject.toml
+/uv.lock
