@@ -12,7 +12,7 @@ def work_dir():
 
 @pytest.fixture(scope='session')
 def reference_fmus_dir():
-    yield Path(__file__).parent.parent / 'Reference-FMUs-0.0.36'
+    yield Path(__file__).parent.parent / 'Reference-FMUs-0.0.38'
 
 @pytest.fixture(scope='session')
 def resources_dir():

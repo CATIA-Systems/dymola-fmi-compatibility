@@ -89,7 +89,7 @@ With Dymola 2025x Refresh 1.
 | CoupledClutches       |        :x:         |        :x:         |
 | SlidingCrank          |        :x:         |        :x:         |
 
-### [Reference FMUs 0.0.36](https://github.com/modelica/Reference-FMUs/releases/tag/v0.0.36)
+### [Reference FMUs 0.0.38](https://github.com/modelica/Reference-FMUs/releases/tag/v0.0.38)
 
 #### FMI 1.0
 
@@ -115,7 +115,7 @@ With Dymola 2025x Refresh 1.
 
 | Model        |         CS         |         ME         |
 |--------------|:------------------:|:------------------:|
-| BouncingBall | :white_check_mark: |        :x:         |
+| BouncingBall | :white_check_mark: | :white_check_mark: |
 | Dahlquist    | :white_check_mark: | :white_check_mark: |
 | Resource     | :white_check_mark: | :white_check_mark: |
 | Stair        | :white_check_mark: | :white_check_mark: |
