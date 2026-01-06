@@ -26,7 +26,7 @@ Binaries: x86_64 binaries for Linux and Windows
 
 ## FMU Import
 
-With Dymola 2025x Refresh 1.
+With Dymola 2026x.
 
 ### [Altair Activate 2020](https://github.com/altairengineering/fmus)
 
@@ -75,21 +75,21 @@ With Dymola 2025x Refresh 1.
 
 #### FMI 2.0
 
-| Model                 |         CS         |         ME         |
-|-----------------------|:------------------:|:------------------:|
-| ControlledTemperature | :white_check_mark: | :white_check_mark: |
-| CoupledClutches       |        :x:         | :white_check_mark: |
-| Rectifier             | :white_check_mark: | :white_check_mark: |
+| Model                 |         CS          |         ME         |
+|-----------------------|:-------------------:|:------------------:|
+| ControlledTemperature | :white_check_mark:  | :white_check_mark: |
+| CoupledClutches       | :white_check_mark:  | :white_check_mark: |
+| Rectifier             | :white_check_mark:  | :white_check_mark: |
 
 #### FMI 3.0
 
 | Model                 |         CS         |         ME         |
 |-----------------------|:------------------:|:------------------:|
 | ControlledTemperature | :white_check_mark: | :white_check_mark: |
-| CoupledClutches       |        :x:         |        :x:         |
-| SlidingCrank          |        :x:         |        :x:         |
+| CoupledClutches       | :white_check_mark: | :white_check_mark: |
+| SlidingCrank          | :white_check_mark: | :white_check_mark: |
 
-### [Reference FMUs 0.0.38](https://github.com/modelica/Reference-FMUs/releases/tag/v0.0.38)
+### [Reference FMUs 0.0.39](https://github.com/modelica/Reference-FMUs/releases/tag/v0.0.39)
 
 #### FMI 1.0
 
@@ -122,7 +122,7 @@ With Dymola 2025x Refresh 1.
 | StateSpace   | :white_check_mark: | :white_check_mark: |
 | VanDerPol    | :white_check_mark: | :white_check_mark: |
 
-### [MWorks Sysplorer 2024a](https://github.com/TongYuan-MC/fmus)
+### [MWorks Sysplorer 2025b](https://github.com/TongYuan-MC/fmus)
 
 #### FMI 2.0
 
@@ -132,17 +132,16 @@ With Dymola 2025x Refresh 1.
 | CoupledClutches | :white_check_mark: | :white_check_mark: |
 | DFFREG          | :white_check_mark: | :white_check_mark: |
 
-
 #### FMI 3.0
 
-| Model           |         CS         |         ME         |
-|-----------------|:------------------:|:------------------:|
-| BouncingBall    | :white_check_mark: |        :x:         |
-| CoupledClutches | :white_check_mark: |        :x:         |
-| DFFREG          | :white_check_mark: | :white_check_mark: |
+| Model           | CS  |         ME         |
+|-----------------|:---:|:------------------:|
+| BouncingBall    | :x: | :white_check_mark: |
+| CoupledClutches | :x: | :white_check_mark: |
+| DFFREG          | :x: | :white_check_mark: |
 
 ## License
 
-Copyright 2025 Dassault Systemes.
+Copyright 2026 Dassault Systemes.
 All rights reserved.
 The models and accompanying materials may only be used for testing and validation of FMI implementations.
