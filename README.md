@@ -140,6 +140,42 @@ With Dymola 2026x.
 | CoupledClutches | :x: | :white_check_mark: |
 | DFFREG          | :x: | :white_check_mark: |
 
+### [dSPACE SystemDesk 24.1](https://www.dspace.com/en/pub/home/support/supvers/supverscompm/fmicompatibility/fmi-cross-check-systemdesk.cfm)
+
+#### FMI 2.0
+
+| Model                |         CS         |
+|----------------------|:------------------:|
+| AdaptiveHeadlight    | :white_check_mark: |
+| LunarLanderAutopilot | :white_check_mark: |
+| SignalGenerator      | :white_check_mark: |
+
+#### FMI 3.0
+
+| Model                | CS  |
+|----------------------|:---:|
+| AdaptiveHeadlight    | :x: |
+| LunarLanderAutopilot | :x: |
+| SignalGenerator      | :x: |
+
+### [dSPACE TargetLink 24.1](https://www.dspace.com/en/pub/home/support/supvers/supverscompm/fmicompatibility/fmi-cross-check-targetlink.cfm)
+
+#### FMI 2.0
+
+| Model                    |         CS         |
+|--------------------------|:------------------:|
+| Fmucontroller            | :white_check_mark: |
+| Fmufuelratecontroller    | :white_check_mark: |
+| FmuTL_VelocityController | :white_check_mark: |
+
+#### FMI 3.0
+
+| Model                 |         CS         |
+|-----------------------|:------------------:|
+| controller            | :white_check_mark: |
+| fuelratecontroller    | :white_check_mark: |
+| TL_VelocityController | :white_check_mark: |
+
 ## License
 
 Copyright 2026 Dassault Systemes.
